@@ -1,0 +1,19 @@
+.category-list {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.category-form {
+  max-inline-size: 420px;
+}
+
+.category-row {
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--color-navy) 10%, white);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}

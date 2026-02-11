@@ -1,0 +1,37 @@
+{
+  "title": "إتمام الطلب",
+  "steps": {
+    "review": "مراجعة السلة",
+    "info": "بيانات التوصيل",
+    "confirm": "تأكيد الطلب"
+  },
+  "form": {
+    "name": "الاسم الكامل",
+    "phone": "رقم واتساب",
+    "city": "المدينة",
+    "address": "العنوان",
+    "building": "تفاصيل المبنى",
+    "landmark": "علامة مميزة",
+    "notes": "ملاحظات الطلب"
+  },
+  "validation": {
+    "name_required": "الرجاء إدخال الاسم الكامل",
+    "phone_required": "الرجاء إدخال رقم جوال صحيح",
+    "city_required": "الرجاء اختيار المدينة",
+    "address_required": "الرجاء إدخال العنوان كاملاً",
+    "whatsapp_invalid": "هذا الرقم غير مسجل في واتساب",
+    "whatsapp_checking": "جارٍ التحقق...",
+    "whatsapp_valid": "الرقم مفعل على واتساب"
+  },
+  "summary": {
+    "payment_method": "الدفع عند الاستلام",
+    "confirm_cta": "تأكيد الطلب",
+    "delivery_message": "سيتواصل معك فريقنا قريباً"
+  },
+  "confirmation": {
+    "title": "تم تأكيد طلبك",
+    "subtitle": "شكراً لثقتك بنا",
+    "order_number": "رقم الطلب",
+    "message": "سيتواصل معك فريقنا قريباً"
+  }
+}

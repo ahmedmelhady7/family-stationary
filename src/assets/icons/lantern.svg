@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">Lantern</title>
+  <desc id="desc">Islamic lantern icon for empty and success states.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#8C6E24"/>
+    </linearGradient>
+  </defs>
+  <rect x="96" y="18" width="8" height="24" rx="4" fill="#1A2744"/>
+  <rect x="72" y="42" width="56" height="14" rx="7" fill="#1A2744"/>
+  <path d="M64 58h72l-8 92a12 12 0 0 1-12 11H84a12 12 0 0 1-12-11L64 58z" fill="url(#g)" stroke="#1A2744" stroke-width="6"/>
+  <rect x="78" y="72" width="44" height="56" rx="8" fill="#FBF7F0" stroke="#1A2744" stroke-width="4"/>
+  <circle cx="100" cy="100" r="10" fill="#C75B39"/>
+  <path d="M100 84v32M84 100h32" stroke="#1A2744" stroke-width="3" opacity="0.6"/>
+  <rect x="86" y="162" width="28" height="12" rx="6" fill="#1A2744"/>
+</svg>

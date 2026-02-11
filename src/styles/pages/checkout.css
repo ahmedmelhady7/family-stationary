@@ -1,0 +1,58 @@
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: var(--space-lg);
+}
+
+.checkout-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--color-navy) 10%, white);
+  padding: var(--space-lg);
+  display: grid;
+  gap: var(--space-md);
+}
+
+.checkout-progress {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-sm);
+}
+
+.checkout-progress__step {
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--color-navy) 12%, white);
+  min-block-size: 12px;
+}
+
+.checkout-progress__step[data-active='true'] {
+  background: var(--color-primary);
+}
+
+.checkout-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.checkout-summary {
+  position: sticky;
+  inset-block-start: 92px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--color-navy) 10%, white);
+  padding: var(--space-md);
+  block-size: fit-content;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 900px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-summary {
+    position: static;
+  }
+}

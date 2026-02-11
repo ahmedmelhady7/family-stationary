@@ -1,0 +1,42 @@
+.admin-products {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.admin-toolbar {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.admin-table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-table th,
+.admin-table td {
+  border-block-end: 1px solid color-mix(in srgb, var(--color-navy) 10%, white);
+  padding: var(--space-sm);
+  text-align: start;
+}
+
+@media (max-width: 900px) {
+  .admin-table,
+  .admin-table thead,
+  .admin-table tbody,
+  .admin-table tr,
+  .admin-table th,
+  .admin-table td {
+    display: block;
+  }
+
+  .admin-table thead {
+    display: none;
+  }
+}

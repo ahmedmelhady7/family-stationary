@@ -1,0 +1,9 @@
+.admin-login {
+  min-block-size: 70vh;
+  display: grid;
+  place-items: center;
+}
+
+.admin-login__card {
+  inline-size: min(100%, 460px);
+}

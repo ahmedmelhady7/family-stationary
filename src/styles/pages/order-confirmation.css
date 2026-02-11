@@ -1,0 +1,22 @@
+.confirmation {
+  max-inline-size: 760px;
+  margin-inline: auto;
+  text-align: center;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--color-navy) 10%, white);
+  padding: var(--space-2xl);
+  display: grid;
+  gap: var(--space-md);
+}
+
+.confirmation__icon {
+  inline-size: 120px;
+  margin-inline: auto;
+}
+
+.confirmation__number {
+  font-family: var(--font-ui);
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+}

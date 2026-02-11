@@ -1,0 +1,27 @@
+.admin-form-layout {
+  max-inline-size: 900px;
+  display: grid;
+  gap: var(--space-md);
+}
+
+.drop-zone {
+  border: 2px dashed color-mix(in srgb, var(--color-primary) 35%, white);
+  border-radius: var(--radius-lg);
+  min-block-size: 140px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--color-primary) 5%, white);
+}
+
+.image-preview-list {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.image-preview-list img {
+  inline-size: 88px;
+  block-size: 88px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}

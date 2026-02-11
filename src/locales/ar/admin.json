@@ -1,0 +1,42 @@
+{
+  "login": {
+    "title": "دخول لوحة الإدارة",
+    "email": "البريد الإلكتروني",
+    "send_magic_link": "إرسال رابط الدخول"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "total_products": "إجمالي المنتجات",
+    "active_products": "منتجات نشطة",
+    "out_of_stock": "نفد المخزون",
+    "recent_orders": "طلبات حديثة"
+  },
+  "products": {
+    "title": "إدارة المنتجات",
+    "add_product": "إضافة منتج",
+    "edit_product": "تعديل المنتج",
+    "delete_product": "حذف المنتج",
+    "field_name_ar": "اسم المنتج (عربي)",
+    "field_price": "السعر",
+    "field_description_ar": "الوصف (عربي)",
+    "field_category_id": "التصنيف",
+    "field_stock_quantity": "الكمية المتاحة",
+    "field_status": "الحالة",
+    "drop_images": "أسقط الصور هنا أو اختر من الجهاز",
+    "status_active": "نشط",
+    "status_inactive": "غير نشط",
+    "status_out_of_stock": "نفد المخزون",
+    "search_placeholder": "ابحث عن منتج"
+  },
+  "categories": {
+    "title": "إدارة التصنيفات",
+    "add_category": "إضافة تصنيف",
+    "name": "اسم التصنيف",
+    "reorder_hint": "يمكنك تغيير الترتيب بالسحب"
+  },
+  "toast": {
+    "saved": "تم حفظ التغييرات",
+    "deleted": "تم الحذف بنجاح",
+    "error": "حدث خطأ أثناء تنفيذ العملية"
+  }
+}

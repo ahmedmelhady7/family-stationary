@@ -1,0 +1,11 @@
+.offline-page {
+  min-block-size: 70vh;
+  display: grid;
+  place-items: center;
+  gap: var(--space-md);
+  text-align: center;
+}
+
+.offline-icon {
+  inline-size: 200px;
+}

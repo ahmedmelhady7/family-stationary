@@ -1,0 +1,42 @@
+.hero {
+  position: relative;
+  padding: var(--space-2xl);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 90%, black), var(--color-navy)),
+    var(--color-primary);
+  color: #fff;
+  display: grid;
+  gap: var(--space-md);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../../assets/patterns/geometric-border.svg');
+  opacity: 0.14;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  margin-block-start: var(--space-2xl);
+  display: grid;
+  gap: var(--space-md);
+}
+
+.category-card {
+  min-block-size: 120px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, var(--color-sand), color-mix(in srgb, var(--color-ivory) 88%, white));
+  border: 1px solid color-mix(in srgb, var(--color-navy) 10%, white);
+  padding: var(--space-md);
+  display: grid;
+  align-content: center;
+  gap: var(--space-xs);
+}

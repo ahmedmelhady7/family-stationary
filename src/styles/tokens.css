@@ -1,0 +1,66 @@
+:root {
+  --color-primary: #1b5e3a;
+  --color-primary-light: #2d7a4f;
+  --color-primary-dark: #134428;
+  --color-gold: #c9a84c;
+  --color-gold-light: #d4b96a;
+  --color-ivory: #fbf7f0;
+  --color-navy: #1a2744;
+  --color-terracotta: #c75b39;
+  --color-sage: #8fae8b;
+  --color-sand: #e8dcc8;
+  --color-purple: #6b5b8a;
+  --color-success: var(--color-sage);
+  --color-error: var(--color-terracotta);
+  --color-warning: var(--color-gold);
+  --color-info: var(--color-primary);
+
+  --font-heading: 'Amiri', 'Noto Naskh Arabic', serif;
+  --font-body: 'Noto Naskh Arabic', Tahoma, sans-serif;
+  --font-ui: 'Cairo', 'Noto Sans Arabic', sans-serif;
+  --line-height-ar: 1.6;
+  --line-height-tight: 1.3;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgb(26 39 68 / 8%);
+  --shadow-md: 0 4px 12px rgb(26 39 68 / 12%);
+  --shadow-lg: 0 8px 24px rgb(26 39 68 / 16%);
+  --shadow-gold: 0 4px 12px rgb(201 168 76 / 20%);
+
+  --max-width: 1200px;
+  --grid-gap: var(--space-md);
+
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal-backdrop: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+
+  direction: rtl;
+}

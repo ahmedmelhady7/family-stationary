@@ -1,0 +1,32 @@
+.islamic-border {
+  block-size: 10px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--color-gold) 0,
+      var(--color-gold) 8px,
+      var(--color-primary) 8px,
+      var(--color-primary) 16px
+    );
+}
+
+.islamic-arch {
+  border-radius: 50% 50% var(--radius-lg) var(--radius-lg) / 70% 70% var(--radius-lg)
+    var(--radius-lg);
+}
+
+.pattern-overlay {
+  position: relative;
+  isolation: isolate;
+}
+
+.pattern-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../../assets/patterns/arabesque-tile.svg');
+  background-size: 120px 120px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+}

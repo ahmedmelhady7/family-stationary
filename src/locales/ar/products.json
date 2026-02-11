@@ -1,0 +1,38 @@
+{
+  "home": {
+    "hero_title": "قرطاسية عربية بروح إسلامية",
+    "hero_description": "منتجات مدرسية مختارة بعناية لعائلتك",
+    "hero_cta": "تصفح المنتجات",
+    "categories_title": "التصنيفات",
+    "featured_title": "منتجات مميزة"
+  },
+  "listing": {
+    "title": "كل المنتجات",
+    "search_placeholder": "ابحث باسم المنتج",
+    "filters": "الفلاتر",
+    "all_categories": "كل التصنيفات",
+    "in_stock_only": "متوفر فقط",
+    "sort_newest": "الأحدث",
+    "sort_price_asc": "السعر: الأقل أولاً",
+    "sort_price_desc": "السعر: الأعلى أولاً",
+    "sort_name": "الاسم"
+  },
+  "detail": {
+    "related_title": "منتجات مشابهة",
+    "out_of_stock": "غير متوفر حالياً",
+    "in_stock": "متوفر",
+    "share_whatsapp": "مشاركة عبر واتساب"
+  },
+  "cart": {
+    "title": "مراجعة السلة",
+    "empty_title": "سلتك فارغة",
+    "empty_description": "ابدأ بإضافة منتجات من المتجر",
+    "summary_title": "ملخص الطلب"
+  },
+  "badges": {
+    "in_stock": "متوفر",
+    "out_of_stock": "نفد المخزون",
+    "featured": "مميز",
+    "sale": "عرض"
+  }
+}

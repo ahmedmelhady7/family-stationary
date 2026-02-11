@@ -1,0 +1,26 @@
+.admin-main {
+  padding: var(--space-lg);
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md);
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--color-navy) 10%, white);
+  padding: var(--space-md);
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.stat-card__value {
+  font-size: var(--text-2xl);
+  font-family: var(--font-ui);
+  color: var(--color-primary);
+}
