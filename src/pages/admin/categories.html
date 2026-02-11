@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Family Stationary - Admin Categories</title>
+    <meta name="description" content="Family Stationary admin categories" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/pages/admin/categories.css" />
+  </head>
+  <body class="page-shell">
+    <a href="#main-content" class="skip-link" data-i18n="common:skip.to_content"></a>
+    <header id="site-header"></header>
+    <main id="main-content" class="admin-shell">
+      <nav class="admin-nav" data-admin-sidebar aria-label="Admin Navigation"></nav>
+      <section class="admin-main">
+        <h1 data-i18n="admin:categories.title"></h1>
+
+        <form id="add-category-form" class="form-stack category-form">
+          <label class="form-field" for="category-name">
+            <span class="form-label" data-i18n="admin:categories.name"></span>
+            <input class="form-control" id="category-name" name="name_ar" type="text" required />
+          </label>
+          <button class="button button--primary" type="submit" data-i18n="admin:categories.add_category"></button>
+        </form>
+
+        <p class="text-muted" data-i18n="admin:categories.reorder_hint"></p>
+        <section class="category-list" id="categories-list"></section>
+      </section>
+      <nav class="admin-bottom-nav" data-admin-bottom-nav aria-label="Admin Mobile Navigation"></nav>
+    </main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="/scripts/pages/admin/categories.js"></script>
+  </body>
+</html>

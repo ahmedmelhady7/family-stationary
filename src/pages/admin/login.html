@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Family Stationary - Admin Login</title>
+    <meta name="description" content="Family Stationary admin login" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/pages/admin/login.css" />
+  </head>
+  <body>
+    <main id="main-content" class="admin-login">
+      <section class="card admin-login__card">
+        <div class="card__body">
+          <h1 data-i18n="admin:login.title"></h1>
+          <form id="admin-login-form" class="form-stack">
+            <label class="form-field" for="admin-email">
+              <span class="form-label" data-i18n="admin:login.email"></span>
+              <input class="form-control" id="admin-email" name="email" type="email" required />
+            </label>
+            <button type="submit" class="button button--primary" data-i18n="admin:login.send_magic_link"></button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/scripts/pages/admin/login.js"></script>
+  </body>
+</html>

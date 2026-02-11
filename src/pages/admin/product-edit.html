@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Family Stationary - Admin Edit Product</title>
+    <meta name="description" content="Family Stationary admin product edit" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/pages/admin/product-edit.css" />
+  </head>
+  <body class="page-shell">
+    <a href="#main-content" class="skip-link" data-i18n="common:skip.to_content"></a>
+    <header id="site-header"></header>
+    <main id="main-content" class="admin-shell">
+      <nav class="admin-nav" data-admin-sidebar aria-label="Admin Navigation"></nav>
+      <section class="admin-main">
+        <h1 data-i18n="admin:products.edit_product"></h1>
+        <form id="admin-product-form" class="form-stack admin-form-layout" enctype="multipart/form-data">
+          <input type="hidden" name="id" />
+          <label class="form-field" for="product-name-ar">
+            <span class="form-label" data-i18n="admin:products.field_name_ar"></span>
+            <input class="form-control" id="product-name-ar" name="name_ar" type="text" required />
+          </label>
+          <label class="form-field" for="product-price">
+            <span class="form-label" data-i18n="admin:products.field_price"></span>
+            <input class="form-control" id="product-price" name="price" type="number" min="0" step="0.01" required />
+          </label>
+          <label class="form-field" for="product-description-ar">
+            <span class="form-label" data-i18n="admin:products.field_description_ar"></span>
+            <textarea class="form-control" id="product-description-ar" name="description_ar" rows="4"></textarea>
+          </label>
+          <label class="form-field" for="product-category">
+            <span class="form-label" data-i18n="admin:products.field_category_id"></span>
+            <select class="form-control" id="product-category" name="category_id" required></select>
+          </label>
+          <label class="form-field" for="product-stock">
+            <span class="form-label" data-i18n="admin:products.field_stock_quantity"></span>
+            <input class="form-control" id="product-stock" name="stock_quantity" type="number" min="0" required />
+          </label>
+          <label class="form-field" for="product-status">
+            <span class="form-label" data-i18n="admin:products.field_status"></span>
+            <select class="form-control" id="product-status" name="status">
+              <option value="active" data-i18n="admin:products.status_active"></option>
+              <option value="inactive" data-i18n="admin:products.status_inactive"></option>
+              <option value="out_of_stock" data-i18n="admin:products.status_out_of_stock"></option>
+            </select>
+          </label>
+          <label class="form-field" for="product-featured">
+            <span class="form-label" data-i18n="common:labels.featured"></span>
+            <input id="product-featured" name="is_featured" type="checkbox" />
+          </label>
+
+          <div id="image-drop-zone" class="drop-zone">
+            <p data-i18n="admin:products.drop_images"></p>
+            <input id="product-images" name="images" type="file" accept="image/*" multiple />
+          </div>
+          <div class="image-preview-list" id="image-preview-list"></div>
+
+          <div>
+            <button type="submit" class="button button--primary" data-i18n="common:actions.save"></button>
+            <a href="/admin/products.html" class="button button--secondary" data-i18n="common:actions.cancel"></a>
+          </div>
+        </form>
+      </section>
+      <nav class="admin-bottom-nav" data-admin-bottom-nav aria-label="Admin Mobile Navigation"></nav>
+    </main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="/scripts/pages/admin/product-edit.js"></script>
+  </body>
+</html>

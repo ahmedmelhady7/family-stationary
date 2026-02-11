@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Family Stationary - Checkout</title>
+    <meta name="description" content="Family Stationary checkout" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/pages/checkout.css" />
+  </head>
+  <body class="page-shell">
+    <a href="#main-content" class="skip-link" data-i18n="common:skip.to_content"></a>
+    <header id="site-header"></header>
+    <main id="main-content">
+      <h1 data-i18n="checkout:title"></h1>
+      <div class="checkout-layout">
+        <section class="checkout-card" aria-label="Checkout Steps">
+          <div class="checkout-progress" aria-label="Progress">
+            <span class="checkout-progress__step" data-active="true"></span>
+            <span class="checkout-progress__step" data-active="false"></span>
+            <span class="checkout-progress__step" data-active="false"></span>
+          </div>
+
+          <section id="step-review">
+            <h2 data-i18n="checkout:steps.review"></h2>
+            <div id="step-review-list"></div>
+            <div class="checkout-actions">
+              <a href="/cart.html" class="button button--secondary" data-i18n="common:actions.back"></a>
+              <button type="button" class="button button--primary" data-step-next data-i18n="common:actions.next"></button>
+            </div>
+          </section>
+
+          <section id="step-info" class="hidden">
+            <h2 data-i18n="checkout:steps.info"></h2>
+            <form id="customer-form" class="form-stack" novalidate>
+              <label class="form-field" for="customer-name">
+                <span class="form-label" data-i18n="checkout:form.name"></span>
+                <input class="form-control" id="customer-name" name="name" type="text" required />
+              </label>
+
+              <label class="form-field" for="customer-phone">
+                <span class="form-label" data-i18n="checkout:form.phone"></span>
+                <input class="form-control" id="customer-phone" name="phone" type="tel" inputmode="tel" required />
+                <span id="whatsapp-status" class="validation-pill"></span>
+              </label>
+
+              <label class="form-field" for="customer-city">
+                <span class="form-label" data-i18n="checkout:form.city"></span>
+                <select class="form-control" id="customer-city" name="city" required>
+                  <option value="" data-i18n="checkout:validation.city_required"></option>
+                  <option value="cairo">Cairo</option>
+                  <option value="giza">Giza</option>
+                  <option value="alexandria">Alexandria</option>
+                </select>
+              </label>
+
+              <label class="form-field" for="customer-address">
+                <span class="form-label" data-i18n="checkout:form.address"></span>
+                <textarea class="form-control" id="customer-address" name="address" rows="3" required></textarea>
+              </label>
+
+              <label class="form-field" for="customer-building">
+                <span class="form-label" data-i18n="checkout:form.building"></span>
+                <input class="form-control" id="customer-building" name="building" type="text" />
+              </label>
+
+              <label class="form-field" for="customer-landmark">
+                <span class="form-label" data-i18n="checkout:form.landmark"></span>
+                <input class="form-control" id="customer-landmark" name="landmark" type="text" />
+              </label>
+
+              <label class="form-field" for="customer-notes">
+                <span class="form-label" data-i18n="checkout:form.notes"></span>
+                <textarea class="form-control" id="customer-notes" name="notes" rows="2"></textarea>
+              </label>
+
+              <ul id="checkout-form-errors" class="form-error" aria-live="assertive"></ul>
+            </form>
+            <div class="checkout-actions">
+              <button type="button" class="button button--secondary" data-step-back data-i18n="common:actions.back"></button>
+              <button type="button" class="button button--primary" data-step-next data-i18n="common:actions.next"></button>
+            </div>
+          </section>
+
+          <section id="step-confirm" class="hidden">
+            <h2 data-i18n="checkout:steps.confirm"></h2>
+            <div id="step-confirm-content"></div>
+            <div class="checkout-actions">
+              <button type="button" class="button button--secondary" data-step-back data-i18n="common:actions.back"></button>
+              <button type="button" class="button button--gold" id="confirm-order-btn" data-i18n="checkout:summary.confirm_cta"></button>
+            </div>
+          </section>
+        </section>
+
+        <aside class="checkout-summary" id="checkout-summary"></aside>
+      </div>
+    </main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="/scripts/pages/checkout.js"></script>
+  </body>
+</html>

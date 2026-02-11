@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Family Stationary - Admin Products</title>
+    <meta name="description" content="Family Stationary admin products" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/pages/admin/products.css" />
+  </head>
+  <body class="page-shell">
+    <a href="#main-content" class="skip-link" data-i18n="common:skip.to_content"></a>
+    <header id="site-header"></header>
+    <main id="main-content" class="admin-shell">
+      <nav class="admin-nav" data-admin-sidebar aria-label="Admin Navigation"></nav>
+      <section class="admin-main admin-products">
+        <h1 data-i18n="admin:products.title"></h1>
+        <form id="admin-products-filter-form" class="admin-toolbar" role="search">
+          <label class="sr-only" for="admin-products-search" data-i18n="common:labels.search"></label>
+          <input
+            class="form-control"
+            id="admin-products-search"
+            type="search"
+            name="q"
+            data-i18n-placeholder="admin:products.search_placeholder"
+          />
+          <label class="sr-only" for="admin-category-filter" data-i18n="common:labels.category"></label>
+          <select class="form-control" name="category" id="admin-category-filter"></select>
+          <label class="sr-only" for="admin-status-filter" data-i18n="common:labels.status"></label>
+          <select class="form-control" name="status" id="admin-status-filter">
+            <option value="" data-i18n="common:labels.status"></option>
+            <option value="active" data-i18n="admin:products.status_active"></option>
+            <option value="inactive" data-i18n="admin:products.status_inactive"></option>
+            <option value="out_of_stock" data-i18n="admin:products.status_out_of_stock"></option>
+          </select>
+          <label class="sr-only" for="admin-sort-filter" data-i18n="products:listing.sort_name"></label>
+          <select class="form-control" name="sort" id="admin-sort-filter">
+            <option value="newest" data-i18n="products:listing.sort_newest"></option>
+            <option value="price_asc" data-i18n="products:listing.sort_price_asc"></option>
+            <option value="price_desc" data-i18n="products:listing.sort_price_desc"></option>
+            <option value="name" data-i18n="products:listing.sort_name"></option>
+          </select>
+          <a href="/admin/product-edit.html" class="button button--gold" data-i18n="admin:products.add_product"></a>
+        </form>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th data-i18n="admin:products.title"></th>
+              <th data-i18n="common:labels.price"></th>
+              <th data-i18n="common:labels.status"></th>
+              <th data-i18n="common:actions.save"></th>
+            </tr>
+          </thead>
+          <tbody id="admin-products-body"></tbody>
+        </table>
+      </section>
+      <nav class="admin-bottom-nav" data-admin-bottom-nav aria-label="Admin Mobile Navigation"></nav>
+    </main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="/scripts/pages/admin/products.js"></script>
+  </body>
+</html>

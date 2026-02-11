@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Family Stationary - Home</title>
+    <meta name="description" content="Family Stationary Arabic-first storefront" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/icons/icon-192.png" />
+    <link rel="preload" href="/assets/fonts/cairo-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/amiri-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/pages/home.css" />
+  </head>
+  <body class="page-shell">
+    <a href="#main-content" class="skip-link" data-i18n="common:skip.to_content"></a>
+    <header id="site-header"></header>
+    <main id="main-content">
+      <section class="hero pattern-overlay">
+        <div class="hero__content">
+          <h1 data-i18n="products:home.hero_title"></h1>
+          <p data-i18n="products:home.hero_description"></p>
+          <a href="/products.html" class="button button--gold" data-i18n="products:home.hero_cta"></a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="home-categories-heading">
+        <h2 id="home-categories-heading" data-i18n="products:home.categories_title"></h2>
+        <div class="grid grid--categories" id="home-categories"></div>
+      </section>
+
+      <section class="section" aria-labelledby="home-featured-heading">
+        <h2 id="home-featured-heading" data-i18n="products:home.featured_title"></h2>
+        <div class="grid grid--products" id="home-featured"></div>
+      </section>
+    </main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="/scripts/pages/home.js"></script>
+  </body>
+</html>
