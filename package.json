@@ -1,0 +1,28 @@
+{
+  "name": "family-stationary",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Arabic-first Islamic stationery storefront with WhatsApp-driven operations",
+  "scripts": {
+    "dev": "node tools/dev-server.mjs",
+    "dev:supabase": "node tools/dev-supabase.mjs",
+    "dev:all": "node tools/dev-all.mjs",
+    "build": "node tools/build.mjs",
+    "preview": "node tools/preview.mjs",
+    "deploy:staging": "node tools/deploy-staging.mjs",
+    "deploy:prod": "node tools/deploy-prod.mjs",
+    "test": "node --test tests/unit/**/*.test.mjs",
+    "test:e2e": "node tests/e2e/run-e2e.mjs",
+    "test:a11y": "node tests/a11y/run-a11y.mjs",
+    "lint": "node tools/lint.mjs",
+    "lint:fix": "node tools/lint.mjs --fix",
+    "db:migrate": "node tools/db-migrate.mjs",
+    "db:seed": "node tools/db-seed.mjs",
+    "db:reset": "node tools/db-reset.mjs",
+    "db:validate": "node tools/db-validate.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
