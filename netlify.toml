@@ -1,0 +1,79 @@
+[build]
+command = "npm run build"
+publish = "dist"
+
+[build.environment]
+NODE_VERSION = "22"
+
+[[redirects]]
+from = "/products"
+to = "/products.html"
+status = 200
+
+[[redirects]]
+from = "/product"
+to = "/product.html"
+status = 200
+
+[[redirects]]
+from = "/cart"
+to = "/cart.html"
+status = 200
+
+[[redirects]]
+from = "/checkout"
+to = "/checkout.html"
+status = 200
+
+[[redirects]]
+from = "/order-confirmation"
+to = "/order-confirmation.html"
+status = 200
+
+[[redirects]]
+from = "/offline"
+to = "/offline.html"
+status = 200
+
+[[redirects]]
+from = "/admin/login"
+to = "/admin/login.html"
+status = 200
+
+[[redirects]]
+from = "/admin/dashboard"
+to = "/admin/dashboard.html"
+status = 200
+
+[[redirects]]
+from = "/admin/products"
+to = "/admin/products.html"
+status = 200
+
+[[redirects]]
+from = "/admin/product-edit"
+to = "/admin/product-edit.html"
+status = 200
+
+[[redirects]]
+from = "/admin/categories"
+to = "/admin/categories.html"
+status = 200
+
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "DENY"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+for = "/workers/sw.js"
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"

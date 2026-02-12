@@ -33,8 +33,9 @@ Run in order:
 
 ## 5. Staging Deploy (Netlify)
 1. Run `npm run build`.
-2. Run `npm run deploy:staging` (contract check).
-3. Upload `dist/` to Netlify or run your Netlify CI deployment step.
+2. Authenticate once: `npx netlify login`.
+3. Optionally set `NETLIFY_SITE_ID` and `NETLIFY_AUTH_TOKEN` for non-interactive CI/CLI deploys.
+4. Run `npm run deploy:staging`.
 
 ## 6. Production Deploy (Hetzner + Docker)
 1. Run `npm run build`.

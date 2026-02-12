@@ -18,6 +18,8 @@ Arabic-first Islamic e-commerce storefront for stationery products, with WhatsAp
 - `npm run test:a11y` - accessibility checks
 - `npm run build` - production build to `dist/`
 - `npm run preview` - preview built app on port 4173
+- `npm run deploy:staging` - deploy `dist/` preview to Netlify
+- `npm run deploy:prod` - production deploy contract (Hetzner pipeline)
 - `npm run db:migrate` - migration sanity pass
 - `npm run db:seed` - seed sanity pass
 - `npm run db:reset` - reset guidance and validation
@@ -44,6 +46,10 @@ Create `.env` with:
 - `WA_GROUP_ID`
 - `WA_ORDER_CONFIRM_TEMPLATE` (default: `order_confirmation_ar`)
 
+Optional for non-interactive Netlify deploys:
+- `NETLIFY_SITE_ID`
+- `NETLIFY_AUTH_TOKEN`
+
 ## Security Notes
 - No secrets in source control.
 - WhatsApp webhook validates signature/verify token and authorized senders.
@@ -51,6 +57,7 @@ Create `.env` with:
 
 ## Deployment
 - Staging: Netlify (`npm run deploy:staging`)
+  - First-time setup: `npx netlify login`
 - Production: Hetzner + Docker Compose (`npm run deploy:prod`)
 
 ## Rollback
