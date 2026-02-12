@@ -2,6 +2,10 @@ import { jsonResponse, parseJsonSafe } from '../_shared/http.ts';
 import { restPatch, restSelect } from '../_shared/rest.ts';
 import { sendTemplateMessage } from '../_shared/whatsapp.ts';
 
+function orderConfirmationTemplateName() {
+  return Deno.env.get('WA_ORDER_CONFIRM_TEMPLATE')?.trim() || 'order_confirmation_ar';
+}
+
 async function fetchOrder(orderId: string) {
   const rows = await restSelect(
     'orders',
@@ -29,12 +33,13 @@ Deno.serve(async (request) => {
     return jsonResponse({ ok: true, duplicate: true });
   }
 
-  await sendTemplateMessage(order.customer_phone, 'order_confirmation_ar', [order.order_number, String(order.total)]);
+  const templateName = orderConfirmationTemplateName();
+  await sendTemplateMessage(order.customer_phone, templateName, [order.order_number, String(order.total)]);
 
   await restPatch('orders', `?id=eq.${encodeURIComponent(order.id)}`, {
     wa_confirmation_sent: true,
     status: order.status === 'pending' ? 'confirmed' : order.status,
   });
 
-  return jsonResponse({ ok: true, order_number: order.order_number });
+  return jsonResponse({ ok: true, order_number: order.order_number, template: templateName });
 });

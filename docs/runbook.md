@@ -27,8 +27,9 @@ Run in order:
    - `WA_VERIFY_TOKEN`
    - `WA_AUTHORIZED_NUMBERS`
    - `WA_GROUP_ID`
+   - `WA_ORDER_CONFIRM_TEMPLATE` (`order_confirmation_ar` or approved fallback, e.g. `order_confirmation_ar_v1`)
 3. Configure webhook endpoint `/functions/v1/whatsapp-webhook`.
-4. Submit and approve template `order_confirmation_ar`.
+4. Submit and approve template `order_confirmation_ar` (or approved fallback used by `WA_ORDER_CONFIRM_TEMPLATE`).
 
 ## 5. Staging Deploy (Netlify)
 1. Run `npm run build`.

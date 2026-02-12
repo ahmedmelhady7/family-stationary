@@ -42,6 +42,7 @@ Create `.env` with:
 - `WA_VERIFY_TOKEN`
 - `WA_AUTHORIZED_NUMBERS`
 - `WA_GROUP_ID`
+- `WA_ORDER_CONFIRM_TEMPLATE` (default: `order_confirmation_ar`)
 
 ## Security Notes
 - No secrets in source control.

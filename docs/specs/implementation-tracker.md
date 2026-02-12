@@ -68,7 +68,7 @@ flowchart TD
 | 1.9 | B | done | Codex | 1.8,6.10 | `src/scripts/components/cart-badge.js`, `src/styles/components/cart-badge.css` |
 | 1.10 | B | done | Codex | 1.8,6.5,6.7,6.14 | `src/pages/cart.html`, `src/scripts/pages/cart.js`, `src/styles/pages/cart.css` |
 | 1.11 | B | done | Codex | 1.1 | `supabase/functions/optimize-image/index.ts` |
-| 2.1 | B | blocked_external | Codex | none | `.env.example` / env contract in README |
+| 2.1 | B | done | Codex | none | Meta Cloud API live send `HTTP 200` accepted on 2026-02-12 (`hello_world`) |
 | 2.2 | B | done | Codex | 2.1 | `supabase/functions/whatsapp-webhook/index.ts` |
 | 2.3 | B | done | Codex | 2.1 | `supabase/functions/_shared/whatsapp.ts` |
 | 2.4 | B | done | Codex | 2.2,1.1 | `supabase/functions/parse-product-link/index.ts` |
@@ -87,7 +87,7 @@ flowchart TD
 | 3.8 | C | done | Codex | 6.8 | `src/scripts/components/toast.js`, `src/styles/components/toast.css` |
 | 4.1 | D | done | Codex | 1.1 | `supabase/migrations/004_orders.sql` |
 | 4.2 | D | done | Codex | 4.1 | `supabase/migrations/005_rls_orders.sql` |
-| 4.3 | D | blocked_external | Codex | 2.1 | Meta template approval runbook step |
+| 4.3 | D | blocked_external | Codex | 2.1 | `order_confirmation_ar_v1` submitted (ID `745518335018428`), status `PENDING` on 2026-02-12 |
 | 4.4 | D | done | Codex | 4.1,4.3,2.3 | `supabase/functions/order-confirm/index.ts` |
 | 4.5 | D | done | Codex | 4.1,4.4 | `supabase/migrations/006_order_triggers.sql` |
 | 4.6 | D | done | Codex | 4.5,2.3 | `supabase/functions/order-alert-group/index.ts` |
@@ -111,7 +111,8 @@ flowchart TD
 - 2026-02-11: `npm run test:a11y` ✅ (`0 critical/serious issues in static audit`).
 - 2026-02-11: `npm run build` ✅ (`build complete: dist/`).
 - 2026-02-11: `npm run db:validate` ✅ (`db validation passed`).
+- 2026-02-12: WhatsApp API live verification ✅ `hello_world` send accepted (`HTTP 200`) for phone ID `974121889122023`.
+- 2026-02-12: Template status check ⚠️ `order_confirmation_ar_v1` is `PENDING` (ID `745518335018428`), not yet approved.
 
 ## External Blockers
-- `2.1`: Meta Cloud API app setup requires Business Manager access and verified production credentials.
-- `4.3`: WhatsApp template `order_confirmation_ar` requires submission/approval in Meta Business Manager.
+- `4.3`: WhatsApp order confirmation template is submitted as `order_confirmation_ar_v1` and still awaiting Meta approval.
