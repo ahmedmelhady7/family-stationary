@@ -72,7 +72,7 @@ function renderCategories() {
 }
 
 async function initCategoriesPage() {
-  if (!ensureAdminAuth()) {
+  if (!(await ensureAdminAuth())) {
     return;
   }
 

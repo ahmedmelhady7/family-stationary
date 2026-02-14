@@ -1,10 +1,18 @@
 import { initI18n, translateDom } from '../../i18n.js';
-import { signInWithMagicLink, isAuthenticated } from '../../services/auth.js';
+import { completeSignInFromUrl, requireAdminSession, signInWithMagicLink } from '../../services/auth.js';
 import { showToast } from '../../components/toast.js';
+
+function sanitizeNextPath(next) {
+  const value = String(next || '');
+  if (!value.startsWith('/') || value.startsWith('//')) {
+    return '/admin/dashboard.html';
+  }
+  return value;
+}
 
 function redirectAfterAuth() {
   const params = new URLSearchParams(window.location.search);
-  const next = params.get('next') || '/admin/dashboard.html';
+  const next = sanitizeNextPath(params.get('next') || '/admin/dashboard.html');
   window.location.href = next;
 }
 
@@ -12,7 +20,19 @@ async function initLoginPage() {
   await initI18n();
   translateDom(document);
 
-  if (isAuthenticated()) {
+  const callbackState = await completeSignInFromUrl();
+  if (callbackState.handled && callbackState.success) {
+    showToast('success', 'admin:auth.logged_in');
+    redirectAfterAuth();
+    return;
+  }
+
+  if (callbackState.handled && !callbackState.success) {
+    showToast('error', callbackState.errorKey || 'admin:auth.login_failed');
+  }
+
+  const session = await requireAdminSession({ redirectToLogin: false });
+  if (session?.accessToken) {
     redirectAfterAuth();
     return;
   }
@@ -25,9 +45,23 @@ async function initLoginPage() {
       return;
     }
 
-    await signInWithMagicLink(email);
-    showToast('success', 'admin:toast.saved');
-    redirectAfterAuth();
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton instanceof HTMLButtonElement) {
+      submitButton.disabled = true;
+    }
+
+    try {
+      await signInWithMagicLink(email, {
+        nextPath: sanitizeNextPath(new URLSearchParams(window.location.search).get('next') || '/admin/dashboard.html'),
+      });
+      showToast('success', 'admin:auth.magic_link_sent');
+    } catch (error) {
+      showToast('error', error.translationKey || 'admin:auth.login_failed');
+    } finally {
+      if (submitButton instanceof HTMLButtonElement) {
+        submitButton.disabled = false;
+      }
+    }
   });
 }
 

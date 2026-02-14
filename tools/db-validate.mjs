@@ -9,6 +9,7 @@ const requiredMigrations = [
   '006_order_triggers.sql',
   '007_create_order_rpc.sql',
   '008_whatsapp_ingestion.sql',
+  '009_admin_authz_and_storage.sql',
 ];
 
 const migrationDir = 'supabase/migrations';

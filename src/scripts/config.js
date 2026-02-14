@@ -19,7 +19,15 @@ export const STORAGE_KEYS = {
   waConversations: 'family-stationary-wa-conversations',
 };
 
+function getRuntimeEnv() {
+  return globalThis?.__APP_ENV__ || {};
+}
+
 export const ENV = {
-  supabaseUrl: globalThis?.__APP_ENV__?.SUPABASE_URL || '',
-  supabaseAnonKey: globalThis?.__APP_ENV__?.SUPABASE_ANON_KEY || '',
+  get supabaseUrl() {
+    return String(getRuntimeEnv().SUPABASE_URL || '');
+  },
+  get supabaseAnonKey() {
+    return String(getRuntimeEnv().SUPABASE_ANON_KEY || '');
+  },
 };

@@ -5,14 +5,14 @@ import { getCatalogStats } from '../../services/catalog.js';
 import { listOrders } from '../../services/orders.js';
 
 async function initDashboardPage() {
-  if (!ensureAdminAuth()) {
+  if (!(await ensureAdminAuth())) {
     return;
   }
 
   await bootstrapPage({ activePath: '/admin/dashboard.html' });
   renderAdminNav('/admin/dashboard.html');
 
-  const stats = await getCatalogStats();
+  const stats = await getCatalogStats({ adminMode: true });
   const recentOrders = listOrders().slice(0, 10).length;
 
   const nodes = {

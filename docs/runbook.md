@@ -19,6 +19,22 @@ Run in order:
 - Seed: `supabase/seed.sql`.
 - Use `npm run db:migrate` and `npm run db:seed` sanity commands before deploying.
 
+### Admin Access Bootstrap
+- After applying `009_admin_authz_and_storage.sql`, add at least one admin account:
+
+```sql
+insert into public.admin_users (user_id, role, is_active)
+select id, 'admin', true
+from auth.users
+where lower(email) = lower('founder@example.com')
+on conflict (user_id) do update
+set role = excluded.role,
+    is_active = true,
+    updated_at = now();
+```
+
+- Revoke access by setting `is_active = false` for the target `user_id`.
+
 ## 4. WhatsApp Setup (External)
 1. Create Meta Business app and WhatsApp product.
 2. Generate system user token and configure:

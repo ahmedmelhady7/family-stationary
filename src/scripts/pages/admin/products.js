@@ -55,6 +55,7 @@ async function renderTable() {
     page: filters.page,
     sort: filters.sort,
     pageSize: 12,
+    adminMode: true,
   });
 
   body.innerHTML = result.items
@@ -112,7 +113,7 @@ async function renderTable() {
 }
 
 async function initProductsPage() {
-  if (!ensureAdminAuth()) {
+  if (!(await ensureAdminAuth())) {
     return;
   }
 

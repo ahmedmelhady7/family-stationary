@@ -11,6 +11,7 @@
 | [PRD-005](./PRD-005-cash-on-delivery-checkout.md)    | Cash on Delivery Checkout Flow             | P0       | Draft  |
 | [PRD-006](./PRD-006-islamic-theme-arabic-design.md)  | Islamic Theme & Arabic-First Design System | P0       | Draft  |
 | [PRD-007](./PRD-007-i18n-a11y-pwa.md)                | Internationalization, Accessibility & PWA  | P0       | Draft  |
+| [PRD-008](./PRD-008-admin-security-and-upload-hardening.md) | Admin Security and Upload Hardening   | P0       | Draft  |
 
 ---
 
@@ -26,6 +27,8 @@
 | PWA / Offline Support            | PRD-007                   |
 | Accessibility (a11y)             | PRD-007                   |
 | i18n Framework                   | PRD-007                   |
+| Admin Auth Security              | PRD-003, PRD-008          |
+| Admin Upload Reliability         | PRD-003, PRD-008          |
 | Islamic Visual Identity          | PRD-006                   |
 | Product Lifecycle                | PRD-002, PRD-003          |
 | Payment & Checkout               | PRD-005                   |
